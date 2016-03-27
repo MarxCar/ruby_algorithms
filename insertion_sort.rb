@@ -2,7 +2,7 @@
 #Author: Sammy Hannat
 #Description: Sorts array in Big O(n^2)
 
-def insertion_sort(arr)
+def insertion_sort arr
 	len = arr.length-1
 	for i in 0..len
 		low = i
