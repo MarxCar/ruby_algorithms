@@ -26,5 +26,5 @@ def merge_sort arr
 
 end
 
-array = [90, 80, 99, 1001]
+array = [90, 890,80, 99, 1001]
 puts merge_sort(array)
