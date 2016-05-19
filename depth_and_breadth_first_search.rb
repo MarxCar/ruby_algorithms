@@ -13,7 +13,9 @@ class Node
 	end
 end
 
-
+def check node, val
+	return node if node.val == val
+end
 
 def build_tree arr,tree
 	unless arr.length <= 1
@@ -31,4 +33,20 @@ def build_tree arr,tree
 end
 
 build_tree [1,2,3,4,5,6,7,8, 9], tree=Array.new
-print tree
+
+
+def breadth_first_search node, value
+	return check(node, value)
+	if check(node.left, value)
+		return node.left
+	elsif check(node.right, value)
+		return node.right
+	
+	else
+
+		breadth_first_search node.left, value
+		breadth_first_search node.right, value
+	end
+
+end
+puts breadth_first_search(tree[0], 2)
